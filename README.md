@@ -3,7 +3,7 @@ WS2812FX Libary from kitesurfer1404 translated to JavaScript/Typescript
 
 ## Init
 
-'''
+```typescript
 let x = new WS2812FX_Modes(
 	{
 		leds: 20,
@@ -21,4 +21,4 @@ x.setMode(14);
 while (true) {
 	x.service();
 }
-'''
+```
