@@ -331,7 +331,6 @@ class WS2812FX_Modes {
 	};
 	private _pixels: Uint32Array;
 
-	//* Das bit wird regelmäßig überlaufen, aber da dies eine Feste größe hat wird
 	private _rand16seed: Uint16Array;
 
 	constructor(config: LEDConfig, speed: number) {
@@ -1210,27 +1209,27 @@ class WS2812FX_Modes {
 		return this.twinkle(this.color_wheel(this.random8()), this._seg.colors[1]);
 	}
 
-	//TODO: Muss das so?
+	//TODO: Is this right?
 	public mode_twinkle_fade() {
 		return this.twinkle_fade(this._seg.colors[0]);
 	}
 
-	//TODO: Muss das so?
+	//TODO: Is this right?
 	public mode_twinkle_fade_random() {
 		return this.twinkle_fade(this.color_wheel(this.random8()));
 	}
 
-	//TODO: Muss das so?
+	//TODO: Is this right?
 	public mode_sparkle() {
 		return this.sparkle(this._seg.colors[1], this._seg.colors[0]);
 	}
 
-	//TODO: Muss das so?
+	//TODO: Is this right?
 	public mode_flash_sparkle() {
 		return this.sparkle(this._seg.colors[0], WHITE);
 	}
 
-	//TODO: Muss das so?
+	//TODO: Is this right?
 	public mode_hyper_sparkle() {
 		this.fill(this._seg.colors[0], this._seg.length);
 
@@ -1241,7 +1240,7 @@ class WS2812FX_Modes {
 		return this._seg.speed / 32;
 	}
 
-	//TODO: Muss das so?
+	//TODO: Is this right?
 	public mode_multi_strobe() {
 		this.fill(this._seg.colors[0], this._seg.length);
 
@@ -1352,7 +1351,6 @@ class WS2812FX_Modes {
 		return this.running(color, color);
 	}
 
-	//TODO: Reverse von hier vielleicht klauen?
 	public mode_larson_scanner() {
 		this.fade_out();
 
